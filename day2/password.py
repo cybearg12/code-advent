@@ -11,4 +11,4 @@ class Password:
         print(self.password)
 
     def isValid(self):
-        return self.policy.isValidPassword(self.password)
+        return self.policy.isValidPasswordV2(self.password)

@@ -16,10 +16,9 @@ for line in lines:
     password = Password(line)
     if password.isValid():
         validCount += 1
-        password.toString()
         
 print(validCount)
 
-# password = Password(line)
+# password = Password('7-10 m: hsdgdmmqqncdcgfxpb')
 # password.toString()
 # print(password.isValid())

@@ -10,9 +10,7 @@ class Policy:
         self.max = int(numbers[1].strip())
 
     def toString(self):
-        print(self.character)
-        print(self.min)
-        print(self.max)
+        print(self.min, "-", self.max, " ", self.character)
 
     def isValidPassword(self, password):
         characterCount = password.count(self.character)
@@ -20,4 +18,15 @@ class Policy:
             return False
         
         return True
+
+    def isValidPasswordV2(self, password):
+        
+        characterCount = 0
+        if password[self.min - 1] == self.character:
+            characterCount += 1
+        
+        if password[self.max - 1] == self.character:
+            characterCount += 1
+        
+        return characterCount == 1
 
